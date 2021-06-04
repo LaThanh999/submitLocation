@@ -7,7 +7,7 @@
           <v-form ref="form" v-model="valid" lazy-validation class="mt-4">
             <v-row align="center">
               <v-col class="d-flex" cols="12" sm="6">
-                <v-select
+                <v-autocomplete
                   :items="provinces"
                   v-model="provinceSelect"
                   item-value="provinceID"
@@ -17,10 +17,10 @@
                   :rules="[(v) => !!v || 'Vui lòng chọn tỉnh/tp']"
                   required
                   no-data-text="Ko có dữ liệu"
-                ></v-select>
+                ></v-autocomplete>
               </v-col>
               <v-col class="d-flex" cols="12" sm="6">
-                <v-select
+                <v-autocomplete
                   :items="districts"
                   v-model="districtSelect"
                   item-value="districtID"
@@ -30,10 +30,10 @@
                   :rules="[(v) => !!v || 'Vui lòng chọn quận/huyện']"
                   required
                   no-data-text="Ko có dữ liệu"
-                ></v-select>
+                ></v-autocomplete>
               </v-col>
               <v-col class="d-flex" cols="12" sm="6">
-                <v-select
+                <v-autocomplete
                   :items="wards"
                   v-model="wardsSelect"
                   item-value="wardID"
@@ -43,7 +43,7 @@
                   :rules="[(v) => !!v || 'Vui lòng chọn phường/xã']"
                   required
                   no-data-text="Ko tìm thấy"
-                ></v-select>
+                ></v-autocomplete>
               </v-col>
               <v-col class="d-flex" cols="12" sm="6">
                 <v-text-field
